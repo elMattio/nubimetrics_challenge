@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar"
 
 export default function NavBar() {
     return (
-        <nav className="navbar navbar-light bg-light">
+        <nav className="navbar navbar-dark bg-dark">
           <SearchBar/>
         </nav>
     )

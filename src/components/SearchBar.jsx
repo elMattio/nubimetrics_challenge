@@ -13,7 +13,7 @@ function SearchBar({getItems}) {
         className="form-control mr-sm-2" 
         aria-label="Search"
         type="search"
-        placeholder="Search"
+        placeholder="Search..."
         value={search}
         onChange={e => setSearch(e.target.value)}
       />
