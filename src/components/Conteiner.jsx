@@ -7,8 +7,8 @@ function Conteiner({items}) {
   return (
     <div style={{display: "flex", alignItems: "center", justifyContent: "center", marginTop: 30}}>
       <div style={{ width: 1000}}>
-        {items.map(p => 
-        <div>
+        {items.map((p, i) => 
+        <div key={i}>
           <Card 
             title={p.title}
             thumbnail={p.thumbnail}
