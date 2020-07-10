@@ -5,8 +5,8 @@ export default function Producto ({title, thumbnail, price, availableQ, soldQ, l
     return (
         <div class="card border-success mb-3" style={{display: "flex", flexDirection: "row", padding: 5}}>
             <div>
-            <p style={{background: "black", textAlign: "center", color:"white", width: 90}}>{condition}</p>
-            <img style={{width: 300}} src={thumbnail} alt=""/>
+              <p style={{background: "#343A40", textAlign: "center", color:"white", width: 90}}>{condition}</p>
+              <img style={{width: 300}} src={thumbnail} alt=""/>
             </div>
              
             <div class="card-body">
@@ -16,7 +16,7 @@ export default function Producto ({title, thumbnail, price, availableQ, soldQ, l
               <p class="card-text">    {soldQ} vendidos</p> 
               <div style={{display: "flex", justifyContent: "space-between"}}>
                 <p class="card-text">{listingTypeId}</p>
-                <a href="#" class="btn btn-outline-success my-2 my-sm-0">Detalles</a>
+                <a href="https://www.youtube.com/" class="btn btn-outline-success my-2 my-sm-0">Detalles</a>
               </div> 
           </div>
       </div>
