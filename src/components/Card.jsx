@@ -18,7 +18,7 @@ function Card ({title, thumbnail, price, availableQ, soldQ, listingTypeId, condi
               <p className="card-text">    {soldQ} vendidos</p> 
               <div style={{display: "flex", justifyContent: "space-between"}}>
                 <p className="card-text">{listingTypeId}</p>
-                <button onClick={openModal} className="btn btn-outline-success my-2 my-sm-0">Detalles</button>
+                <button onClick={() => openModal(listingTypeId)} className="btn btn-outline-success my-2 my-sm-0">Detalles</button>
               </div> 
           </div>
       </div>

@@ -1,9 +1,8 @@
-import React, {useEffect}from 'react';
+import React from 'react';
 import { connect } from "react-redux";
 import Card from "./Card";
 
 function Conteiner({items}) {
-    useEffect(() => console.log(items));
   return (
     <div style={{display: "flex", alignItems: "center", justifyContent: "center", marginTop: 30}}>
       <div style={{ width: 1000}}>
