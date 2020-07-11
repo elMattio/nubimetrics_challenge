@@ -22,4 +22,4 @@ function SearchBar({getItems}) {
   );
 };
 
-export default connect(null, {getItems})(SearchBar)
+export default connect(null, { getItems })(SearchBar)

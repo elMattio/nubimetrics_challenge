@@ -7,7 +7,7 @@ function ModalW({isModalOpen, closeModal, itemDetail}) {
         return (     
           <div >
             <Modal show={isModalOpen} onHide={closeModal}>
-        <Modal.Header closeButton>{itemDetail.id}</Modal.Header>
+              <Modal.Header closeButton>{itemDetail.id}</Modal.Header>
               <Modal.Body>
                 <p>Status: {itemDetail.status}</p>
                 <p>Site id: {itemDetail.site_id}</p>
