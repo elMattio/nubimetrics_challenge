@@ -8,3 +8,11 @@ export function getItems(query) {
         });
     };
 };
+
+export function closeModal() {
+    return {type: "CLOSE_MODAL"}
+};
+
+export function openModal() {
+    return {type: "OPEN_MODAL"}
+};

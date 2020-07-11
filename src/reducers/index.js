@@ -1,5 +1,6 @@
 const initialState = {
-    items: []
+    items: [],
+    isModalOpen: false
   }
   
 function rootReducer(state = initialState, action) {
@@ -8,8 +9,22 @@ function rootReducer(state = initialState, action) {
           ...state,
           items: action.payload
         }
-      };
+    };
+    if(action.type === "OPEN_MODAL") {
+      return {
+        ...state,
+        isModalOpen: true
+      }
+    };
+    if(action.type === "CLOSE_MODAL") {
+      return {
+        ...state,
+        isModalOpen: false
+      }
+    };
     return state;
 };
+
+
     
 export default rootReducer;

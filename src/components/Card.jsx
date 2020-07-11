@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from "react-redux";
+import { openModal } from "../actions/index";
 
-export default function Producto ({title, thumbnail, price, availableQ, soldQ, listingTypeId, condition}) {
+function Card ({title, thumbnail, price, availableQ, soldQ, listingTypeId, condition, openModal}) {
   
     return (
         <div className="card border-success mb-3" style={{display: "flex", flexDirection: "row", padding: 5}}>
@@ -16,10 +18,12 @@ export default function Producto ({title, thumbnail, price, availableQ, soldQ, l
               <p className="card-text">    {soldQ} vendidos</p> 
               <div style={{display: "flex", justifyContent: "space-between"}}>
                 <p className="card-text">{listingTypeId}</p>
-                <a href="https://www.youtube.com/" class="btn btn-outline-success my-2 my-sm-0">Detalles</a>
+                <button onClick={openModal} className="btn btn-outline-success my-2 my-sm-0">Detalles</button>
               </div> 
           </div>
       </div>
         
     );
 };
+
+export default connect(null, {openModal})(Card)
