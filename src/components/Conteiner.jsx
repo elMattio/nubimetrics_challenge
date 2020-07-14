@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from "react-redux";
 import Card from "./Card";
+import Pagination from "./Pagination";
 
-function Conteiner({items}) {
+function Conteiner({items, activePage, pages}) {
+  var a = items.slice((activePage - 1)*pages, (activePage*pages))
   return (
-    <div style={{display: "flex", alignItems: "center", justifyContent: "center", marginTop: 30}}>
-      <div style={{ width: 1000}}>
-        {items.map((p, i) => 
+    <div style={{display: "flex", alignItems: "center", flexDirection: "column"}}>
+        {a.map((p, i) => 
         <div key={i}>
           <Card 
             title={p.title}
@@ -18,13 +19,17 @@ function Conteiner({items}) {
             condition={p.condition}
           /> 
         </div>)}
+      <div>
+      {items[0] && <Pagination itemsQ={items.length}/>}
       </div>
     </div>
   );
 };
 function mapStateToProps(state) {
   return {
-      items: state.items
+      items: state.items,
+      activePage: state.pagination.active,
+      pages: state.pagination.pages
   }
 }
 export default connect(mapStateToProps)(Conteiner);

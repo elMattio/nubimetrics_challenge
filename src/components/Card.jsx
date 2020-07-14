@@ -1,29 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from "react-redux";
 import { openModal } from "../actions/index";
 
-function Card ({title, thumbnail, price, availableQ, soldQ, listingTypeId, condition, openModal}) {
-  
+import "./Card.css"
+
+function Cad ({title, thumbnail, price, availableQ, soldQ, listingTypeId, condition, openModal}) {
+
+  const [onOver, setOver] = useState("");
     return (
-        <div className="card border-success mb-3" style={{display: "flex", flexDirection: "row", padding: 5}}>
-            <div>
-              <p style={{background: "#343A40", textAlign: "center", color:"white", width: 90}}>{condition}</p>
-              <img style={{width: 300}} src={thumbnail} alt=""/>
-            </div>
-             
-            <div className="card-body">
-              <h6 className="card-title">{title}</h6>
-              <h5 className="card-text">$ {price}</h5>     
-              <p className="card-text">{availableQ} disponibles</p>
-              <p className="card-text">    {soldQ} vendidos</p> 
-              <div style={{display: "flex", justifyContent: "space-between"}}>
-                <p className="card-text">{listingTypeId}</p>
-                <button onClick={() => openModal(listingTypeId)} className="btn btn-outline-success my-2 my-sm-0">Detalles</button>
-              </div> 
-          </div>
-      </div>
-        
+    <div 
+    onMouseEnter={()=>setOver("id")} 
+    onMouseLeave={()=>setOver("")} 
+    onClick={() => openModal(listingTypeId)} 
+    id={onOver} className="wrapper"> 
+      <img className="img" src={thumbnail} alt=""/>
+      <div className="condition">{condition}</div>
+      <div className="title">{title}</div>
+      <div className="price">$ {price}</div>
+      <div className="aQuantity">{availableQ} disponibles</div>
+      <div className="sQuantity">{soldQ} vendidos</div>
+      <div className="id">{listingTypeId}</div>
+    </div>    
     );
 };
 
-export default connect(null, {openModal})(Card)
+export default connect(null, {openModal})(Cad)

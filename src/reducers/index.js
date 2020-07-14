@@ -1,7 +1,12 @@
 const initialState = {
     items: [],
     isModalOpen: false,
-    itemDetail: {}
+    itemDetail: {},
+    pagination: {
+      active: 1,
+      first: 1,
+      pages: 20
+    }
   }
   
 function rootReducer(state = initialState, action) {
@@ -24,9 +29,44 @@ function rootReducer(state = initialState, action) {
         isModalOpen: false
       }
     };
+    if(action.type === "ACTIVE_PAGE") {
+      return {
+        ...state,
+        pagination: {
+          ...state.pagination,
+          active: action.payload
+        }
+      }
+    };
+    if(action.type === "CHANGE_PAGE") {
+      return {
+        ...state,
+        pagination: {
+          ...state.pagination,
+          first: state.pagination.first + action.payload
+        }
+      }
+    };
+    if(action.type === "SET_PAGES") {
+      return {
+        ...state,
+        pagination: {
+          ...state.pagination,
+          pages: action.payload
+        }
+      }
+    };
+    if(action.type === "RESET_PAGINATION") {
+      return {
+        ...state,
+        pagination: {
+          ...state.pagination,
+          active: 1,
+          first: 1 
+        }
+      }
+    };
     return state;
 };
 
-
-    
 export default rootReducer;

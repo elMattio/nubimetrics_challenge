@@ -1,25 +1,25 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { getItems } from "../actions/index"
+import { getItems, resetPagination } from "../actions/index";
+import { Form, Button, FormControl } from "react-bootstrap";
 
 function SearchBar({getItems}) {
   const [search, setSearch] = useState("");
   return (
-    <form className="form-inline" onSubmit={(e) => {
-      e.preventDefault();
-      getItems(search);
+  <Form inline onSubmit={(e) => {
+    e.preventDefault(); 
+    getItems(search);
+    resetPagination();
     }}>
-      <input 
-        className="form-control mr-sm-2" 
-        aria-label="Search"
-        type="search"
-        placeholder="Search..."
-        value={search}
-        onChange={e => setSearch(e.target.value)}
-      />
-      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <FormControl 
+      type="search" 
+      value={search} 
+      onChange={e => setSearch(e.target.value)} 
+      placeholder="Buscar..." 
+      className="mr-sm-2" />
+    <Button className="d-none d-sm-block" type="submit" variant="outline-success">Search</Button>
+  </Form>    
   );
 };
 
-export default connect(null, { getItems })(SearchBar)
+export default connect(null, { getItems, resetPagination })(SearchBar)

@@ -1,0 +1,66 @@
+.wrapper {
+    margin-top: 2%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    display: grid;
+    grid-template-columns: repeat(12, 4vw);
+    grid-gap: 5px;
+    grid-auto-rows: minmax(4vw, auto);
+    border: 1px solid #EEEEEE;
+    background-color: white;
+    border-radius: 15px;
+  }
+
+  .img {
+      margin-left: 1%;
+      width: 23%;
+      grid-column: 1 / 13;
+      grid-row: 2 / 5;  
+  }
+
+  .condition { 
+      text-align: center;
+      padding-top: 5%;
+      padding-left:1% ;
+      font-weight: bold;
+      font-size: calc(1vw + 1vh);
+      grid-column: 1 / 3;
+      grid-row: 1;
+  }
+
+  .title {
+    grid-column: 4 / 13;
+    grid-row: 1;
+    font-size: calc(1vw + 1vh) ;
+  }
+
+  .price {
+    grid-column: 4 / 13;
+    grid-row: 2;
+    font-size: calc(1vw + 1vh);
+    font-weight: bold;
+  }
+
+  .aQuantity {
+    grid-column: 4 / 13;
+    grid-row: 3;
+    font-size: calc(1vw + 0.5vh);
+  }
+
+  .sQuantity {
+    grid-column: 4 / 13;
+    grid-row: 4;
+    font-size: calc(1vw + 0.5vh);
+  }
+ 
+  .id {
+    grid-column: 10 / 13;
+    grid-row: 4;
+    font-size: calc(1vw + 0.75vh);
+  }
+  #id {
+      border: solid 1px #28A745;
+      transition: 0.5s;
+  }
