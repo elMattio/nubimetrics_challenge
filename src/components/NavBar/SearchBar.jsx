@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { getItems, resetPagination, isLoading } from "../actions/index";
+import { getItems, resetPagination, isLoading } from "../../actions/index";
 import { Form, Button, FormControl } from "react-bootstrap";
 
 function SearchBar({getItems, isLoading, resetPagination}) {

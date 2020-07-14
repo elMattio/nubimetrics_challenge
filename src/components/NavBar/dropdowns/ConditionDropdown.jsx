@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from "react-redux"
 import { NavDropdown } from 'react-bootstrap'
-import {conditionFilter} from "./utilities"
-import { sortingItems } from "../actions/index"
+import {conditionFilter} from "./utilities/utilities"
+import { sortingItems } from "../../../actions/index"
 
 function ConditionDropdown({ sortingItems, items, relItems }) {
     return (

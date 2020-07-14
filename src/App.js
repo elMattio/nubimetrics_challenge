@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import NavBar from "./components/NavBar";
-import Conteiner from "./components/Conteiner";
-import Modal from "./components/Modal";
+import NavBar from "./components/NavBar/NavBar";
+import Conteiner from "./components/container/Conteiner";
+import Modal from "./components/container/Modal";
 
 function App() {
   return (

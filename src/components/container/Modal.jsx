@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { closeModal } from "../actions/index";
+import { closeModal } from "../../actions/index";
 import { Modal } from "react-bootstrap";
 
 function ModalW({isModalOpen, closeModal, itemDetail}) {

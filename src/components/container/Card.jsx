@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from "react-redux";
-import { openModal } from "../actions/index";
+import { openModal } from "../../actions/index";
 import "./Card.css"
 
 function Cad ({title, thumbnail, price, availableQ, soldQ, listingTypeId, condition, openModal}) {

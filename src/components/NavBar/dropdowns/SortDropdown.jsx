@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from "react-redux";
 import { NavDropdown } from 'react-bootstrap';
-import { sortingItems, resetPagination } from "../actions/index"
-import {sortPriceL, sortPriceM, sortSoldL, sortSoldM, originalSort} from "./utilities"
+import { sortingItems, resetPagination } from "../../../actions/index"
+import {sortPriceL, sortPriceM, sortSoldL, sortSoldM, originalSort} from "./utilities/utilities"
 
 function SortDropdown({items, relItems, sortingItems}) {
     return (

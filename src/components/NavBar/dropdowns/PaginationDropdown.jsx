@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavDropdown } from 'react-bootstrap';
 import { connect } from "react-redux";
-import { setPages, resetPagination } from "../actions/index";
+import { setPages, resetPagination } from "../../../actions/index";
 
 function PagDropdown({setPages, resetPagination}) {
     function onClick(num) {

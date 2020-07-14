@@ -4,10 +4,10 @@ import { connect } from "react-redux";
 import Navbar from 'react-bootstrap/Navbar'
 import { Nav } from 'react-bootstrap'
 import LoadignBar from "./LoadingBar";
-import SortDropdown from "./SortDropdown";
-import ConditionDropdown from "./ConditionDropdown";
-import PagDropdown from "./PaginationDropdown";
-import PriceDrpdwn from "./PriceDropdown";
+import SortDropdown from "./dropdowns/SortDropdown";
+import ConditionDropdown from "./dropdowns/ConditionDropdown";
+import PagDropdown from "./dropdowns/PaginationDropdown";
+import PriceDrpdwn from "./dropdowns/PriceDropdown";
 
 function NavBar({ isLoading, items }) {
     return (

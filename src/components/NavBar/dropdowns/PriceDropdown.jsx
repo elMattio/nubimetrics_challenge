@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Button } from "react-bootstrap";
-import { sortingItems } from "../actions/index";
-import { priceFilter } from "./utilities";
+import { sortingItems } from "../../../actions/index";
+import { priceFilter } from "./utilities/utilities";
 import "./PriceDropdown.css";
 
 function PriceDrpdwn({sortingItems, relItems}) {

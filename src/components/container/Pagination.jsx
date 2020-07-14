@@ -1,7 +1,7 @@
 import React from "react";
 import { Pagination } from "react-bootstrap";
 import { connect } from "react-redux";
-import {activePage, changePage} from "../actions/index";
+import {activePage, changePage} from "../../actions/index";
 
 function Pages({pagination, activePage, changePage, itemsQ }) {
     let items = [];
