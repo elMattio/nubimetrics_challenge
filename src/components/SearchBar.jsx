@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { getItems, resetPagination } from "../actions/index";
+import { getItems, resetPagination, isLoading } from "../actions/index";
 import { Form, Button, FormControl } from "react-bootstrap";
 
-function SearchBar({getItems}) {
+function SearchBar({getItems, isLoading, resetPagination}) {
   const [search, setSearch] = useState("");
   return (
   <Form inline onSubmit={(e) => {
     e.preventDefault(); 
+    isLoading();
     getItems(search);
     resetPagination();
     }}>
@@ -15,11 +16,11 @@ function SearchBar({getItems}) {
       type="search" 
       value={search} 
       onChange={e => setSearch(e.target.value)} 
-      placeholder="Buscar..." 
+      placeholder="Buscar..."
       className="mr-sm-2" />
     <Button className="d-none d-sm-block" type="submit" variant="outline-success">Search</Button>
   </Form>    
   );
 };
 
-export default connect(null, { getItems, resetPagination })(SearchBar)
+export default connect(null, { getItems, resetPagination,isLoading })(SearchBar)

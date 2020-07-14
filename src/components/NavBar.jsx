@@ -3,16 +3,20 @@ import SearchBar from "./SearchBar"
 import { connect } from "react-redux";
 import { setPages, resetPagination } from "../actions/index"
 import Navbar from 'react-bootstrap/Navbar'
-import {Nav, NavDropdown} from 'react-bootstrap'
+import { Nav, NavDropdown } from 'react-bootstrap'
+import LoadignBar from "./LoadingBar"
 
-function NavBar({setPages, resetPagination}) {
+function NavBar({setPages, resetPagination, isLoading}) {
   function onClick(num) {
     setPages(num);
     resetPagination();
   }
     return (
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Navbar.Brand>My-App</Navbar.Brand>
+      <Navbar.Brand>
+        {!isLoading && "My-App"}
+        {isLoading && <LoadignBar/>}
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
       <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="mr-auto">
@@ -28,4 +32,9 @@ function NavBar({setPages, resetPagination}) {
     )
 };
 
-export default connect(null, { setPages, resetPagination })(NavBar)
+function mapStateToProps(state) {
+  return {
+      isLoading: state.isLoading
+  };
+};
+export default connect(mapStateToProps, { setPages, resetPagination })(NavBar)

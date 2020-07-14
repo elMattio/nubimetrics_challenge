@@ -6,14 +6,16 @@ const initialState = {
       active: 1,
       first: 1,
       pages: 20
-    }
+    },
+    isLoading: false
   }
   
 function rootReducer(state = initialState, action) {
     if (action.type === "GET_ITEMS") {
         return {
           ...state,
-          items: action.payload
+          items: action.payload,
+          isLoading: false
         }
     };
     if(action.type === "OPEN_MODAL") {
@@ -64,6 +66,12 @@ function rootReducer(state = initialState, action) {
           active: 1,
           first: 1 
         }
+      }
+    };
+    if(action.type === "IS_LOADING") {
+      return {
+        ...state,
+        isLoading: true
       }
     };
     return state;

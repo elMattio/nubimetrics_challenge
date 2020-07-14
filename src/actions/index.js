@@ -34,16 +34,20 @@ export function openModal(id) {
 
 export function activePage(number) {
     return {type: "ACTIVE_PAGE", payload: number}
-}
+};
 
 export function changePage(number) {
     return {type: "CHANGE_PAGE", payload: number}   
-}
+};
 
 export function setPages(number) {
     return {type: "SET_PAGES", payload: number}   
-}
+};
 
 export function resetPagination() {
     return {type: "RESET_PAGINATION"}
+};
+
+export function isLoading() {
+    return {type: "IS_LOADING"}
 };

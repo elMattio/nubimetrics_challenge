@@ -14,7 +14,7 @@
   }
 
   .img {
-      margin-left: 1%;
+      margin-left: 4%;
       width: 23%;
       grid-column: 1 / 13;
       grid-row: 2 / 5;  
@@ -31,26 +31,26 @@
   }
 
   .title {
-    grid-column: 4 / 13;
+    grid-column: 5 / 13;
     grid-row: 1;
     font-size: calc(1vw + 1vh) ;
   }
 
   .price {
-    grid-column: 4 / 13;
+    grid-column: 5 / 13;
     grid-row: 2;
     font-size: calc(1vw + 1vh);
     font-weight: bold;
   }
 
   .aQuantity {
-    grid-column: 4 / 13;
+    grid-column: 5 / 13;
     grid-row: 3;
     font-size: calc(1vw + 0.5vh);
   }
 
   .sQuantity {
-    grid-column: 4 / 13;
+    grid-column: 5 / 13;
     grid-row: 4;
     font-size: calc(1vw + 0.5vh);
   }

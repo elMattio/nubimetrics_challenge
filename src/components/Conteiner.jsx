@@ -31,5 +31,5 @@ function mapStateToProps(state) {
       activePage: state.pagination.active,
       pages: state.pagination.pages
   }
-}
+};
 export default connect(mapStateToProps)(Conteiner);
