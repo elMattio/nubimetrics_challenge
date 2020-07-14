@@ -51,3 +51,7 @@ export function resetPagination() {
 export function isLoading() {
     return {type: "IS_LOADING"}
 };
+
+export function sortingItems(items) {
+    return {type: "SORTING_ITEMS", payload: items}
+}

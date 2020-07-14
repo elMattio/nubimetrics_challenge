@@ -1,5 +1,6 @@
 const initialState = {
     items: [],
+    relItems: [],
     isModalOpen: false,
     itemDetail: {},
     pagination: {
@@ -15,6 +16,7 @@ function rootReducer(state = initialState, action) {
         return {
           ...state,
           items: action.payload,
+          relItems: action.payload,
           isLoading: false
         }
     };
@@ -72,6 +74,12 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         isLoading: true
+      }
+    };
+    if(action.type === "SORTING_ITEMS") {
+      return {
+        ...state,
+        items: action.payload
       }
     };
     return state;

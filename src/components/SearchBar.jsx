@@ -11,6 +11,7 @@ function SearchBar({getItems, isLoading, resetPagination}) {
     isLoading();
     getItems(search);
     resetPagination();
+    setSearch("");
     }}>
     <FormControl 
       type="search" 

@@ -1,0 +1,17 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.input {
+    font-size: 20px;
+    border-radius: 5px;
+    border: solid 1px #28A745;
+    width: 100px;
+    margin: 10px;
+    background-color: #EBEBEB;
+}
+.label {
+    color:#EBEBEB ;
+    margin: 10px;
+}

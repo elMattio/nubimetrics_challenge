@@ -33,7 +33,8 @@
   .title {
     grid-column: 5 / 13;
     grid-row: 1;
-    font-size: calc(1vw + 1vh) ;
+    font-size: calc(1vw + 1vh);
+    padding-right: 1%;
   }
 
   .price {
