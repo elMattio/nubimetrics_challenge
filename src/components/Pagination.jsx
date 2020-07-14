@@ -29,7 +29,7 @@ function Pages({pagination, activePage, changePage, itemsQ }) {
         }
     };
     return (
-        <div>
+        <div style={{margin: 20}}>
         <Pagination>
         <Pagination.Prev onClick={handlePrev}/>
         <Pagination>{items}</Pagination>
