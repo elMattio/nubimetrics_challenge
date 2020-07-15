@@ -1,8 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The managing and updating of the global state of the aplication was done with React-Redux: https://react-redux.js.org/
+The managing and updating of the global state of the aplication were done with React-Redux: https://react-redux.js.org/
 
-The asyncronus calls in the actions creators of the global state was done with the redux-thunk middleware: https://github.com/reduxjs/redux-thunk
+The asyncronus calls in the actions creators of the global state were done with the redux-thunk middleware: https://github.com/reduxjs/redux-thunk
 
 API requests done using axios library: https://www.npmjs.com/package/axios
 
