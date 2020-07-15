@@ -9,7 +9,7 @@ import ConditionDropdown from "./dropdowns/ConditionDropdown";
 import PagDropdown from "./dropdowns/PaginationDropdown";
 import PriceDrpdwn from "./dropdowns/PriceDropdown";
 
-function NavBar({ isLoading, items }) {
+function NavBar({ isLoading, relItems }) {
     return (
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
 
@@ -23,9 +23,9 @@ function NavBar({ isLoading, items }) {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
           <PagDropdown/>
-          {items.length > 0 && <SortDropdown/>}
-          {items.length > 0 && <ConditionDropdown/>}
-          {items.length > 0 && <PriceDrpdwn/>}
+          {relItems.length > 0 && <SortDropdown/>}
+          {relItems.length > 0 && <ConditionDropdown/>}
+          {relItems.length > 0 && <PriceDrpdwn/>}
         </Nav>
         <SearchBar/>
       </Navbar.Collapse>
@@ -37,7 +37,7 @@ function NavBar({ isLoading, items }) {
 function mapStateToProps(state) {
   return {
       isLoading: state.isLoading,
-      items: state.items
+      relItems: state.relItems
   };
 };
 export default connect(mapStateToProps)(NavBar);
